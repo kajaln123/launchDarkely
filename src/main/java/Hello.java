@@ -8,15 +8,15 @@ import static java.util.Collections.singletonList;
 public class Hello {
 
  public static void main(String... args) throws IOException {
-   LDClient client = new LDClient("YOUR_SDK_KEY");
+   LDClient client = new LDClient("sdk-c44d0268-5af2-430a-b0c2-52fb43d89f9a");
 
-   LDUser user = new LDUser.Builder("bob@example.com")
-                           .firstName("Bob")
+   LDUser user = new LDUser.Builder("kajal@example.com")
+                           .firstName("kajal")
                            .lastName("Loblaw")
                            .customString("groups", singletonList("beta_testers"))
                            .build();
 
-   boolean showFeature = client.boolVariation("YOUR_FEATURE_KEY", user, false);
+   boolean showFeature = client.boolVariation("user-demo", user, false);
 
    if (showFeature) {
     System.out.println("Showing your feature");
